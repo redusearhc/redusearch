@@ -5,3 +5,10 @@ aiofiles
 python-multipart
 requests
 gunicorn
+fastapi
+uvicorn
+python-multipart
+pydantic
+requests
+aiofiles
+jinja2
