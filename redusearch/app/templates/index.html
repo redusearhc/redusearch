@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redusearch</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="logo">REDUSEARCH</h1>
+    <p class="mensaje">JUEGA A BUSCAR Y CONMIGO LO ENCONTRARÁS</p>
+
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*" required />
+      <div class="buttons">
+        <button type="button" class="premium">Hazte Premium</button>
+        <button type="submit" class="buscar">Buscar</button>
+      </div>
+    </form>
+
+    <div class="motivacion" id="motivacion"></div>
+  </div>
+
+  <script>
+    document.querySelector(".buscar").addEventListener("click", () => {
+      const mensajes = [
+        "La verdad siempre deja huellas.",
+        "Buscar es el primer paso para encontrar.",
+        "Tu búsqueda puede cambiarlo todo.",
+        "La verdad no teme ser buscada.",
+        "Busca con el corazón y encontrarás lo que necesitas."
+      ];
+      const random = mensajes[Math.floor(Math.random() * mensajes.length)];
+      document.getElementById("motivacion").textContent = random;
+    });
+  </script>
+</body>
+</html>
